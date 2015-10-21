@@ -1,0 +1,24 @@
+{
+  "name": "booom",
+  "version": "1.0.0-alpha.1",
+  "description": "BOOOM!",
+  "license": "MIT",
+  "repository": "andreruffert/booom",
+  "homepage": "https://github.com/andreruffert/booom#readme",
+  "author": {
+    "name": "André Ruffert",
+    "url": "andreruffert.com"
+  },
+  "bin": {
+    "booom": "bin/booom"
+  },
+  "files": [
+    "bin/booom",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
