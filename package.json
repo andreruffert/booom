@@ -1,24 +1,38 @@
 {
   "name": "booom",
-  "version": "1.0.0-alpha.1",
-  "description": "BOOOM!",
-  "license": "MIT",
-  "repository": "andreruffert/booom",
-  "homepage": "https://github.com/andreruffert/booom#readme",
-  "author": {
-    "name": "André Ruffert",
-    "url": "andreruffert.com"
+  "version": "1.0.0-alpha.2",
+  "description": "A simple CLI to scaffold some files or folder structures to kickstart new projects.",
+  "main": "index.js",
+  "dependencies": {
+    "got": "^6.3.0",
+    "is-url": "^1.2.1",
+    "unzip": "^0.1.11",
+    "yargs": "^3.32.0"
   },
   "bin": {
-    "booom": "bin/booom"
+    "booom": "bin/booom",
+    "bo": "bin/booom"
   },
   "files": [
     "bin/booom",
-    "templates",
+    "lib",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreruffert/booom.git"
+  },
+  "author": {
+    "name": "André Ruffert",
+    "url": "andreruffert.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreruffert/booom/issues"
+  },
+  "homepage": "https://github.com/andreruffert/booom#readme"
 }

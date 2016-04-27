@@ -1,28 +1,20 @@
 #!/usr/bin/env node
+'use strict';
 
-var path  = require('path');
-var fs = require('fs');
+const argv = require('yargs').argv;
+const isUrl = require('is-url');
+const fetch = require('../lib/fetch');
 
-var templatesPath = path.resolve(__dirname, '../templates')
-var destPath = process.cwd();
+const url = argv._[0];
 
-var templates = fs.readdirSync(templatesPath);
-var files = templates.map(function(filename, index) {
-  return {
-    'name': filename,
-    'data': fs.readFileSync(path.join(templatesPath, filename), 'utf8')
-  };
-});
-
-function writeFile(filename, data) {
-  fs.writeFile(path.join(destPath, filename), data, function (err) {
-    if (err) {
-      throw err;
-    }
-    console.log('✔ saved', filename);
-  });
+if (!url) {
+  console.error('URL argument required');
+  process.exit(1);
 }
 
-files.forEach(function(file) {
-  writeFile(file.name, files.data);
-});
+if (!isUrl(url)) {
+  console.error('URL not valid');
+  process.exit(1);
+}
+
+fetch(url);
