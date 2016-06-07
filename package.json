@@ -1,38 +1,42 @@
 {
   "name": "booom",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0",
   "description": "A simple CLI to scaffold some files or folder structures to kickstart new projects.",
-  "main": "index.js",
-  "dependencies": {
-    "got": "^6.3.0",
-    "is-url": "^1.2.1",
-    "unzip": "^0.1.11",
-    "yargs": "^3.32.0"
-  },
-  "bin": {
-    "booom": "bin/booom",
-    "bo": "bin/booom"
-  },
-  "files": [
-    "bin/booom",
-    "lib",
-    "README.md",
-    "LICENSE"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andreruffert/booom.git"
+  "license": "MIT",
+  "repository": "andreruffert/booom-cli",
+  "bugs": {
+    "url": "https://github.com/andreruffert/booom-cli/issues"
   },
   "author": {
     "name": "André Ruffert",
     "url": "andreruffert.com"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/andreruffert/booom/issues"
+  "bin": {
+    "booom": "cli.js",
+    "bo": "cli.js"
   },
-  "homepage": "https://github.com/andreruffert/booom#readme"
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "files": [
+    "lib",
+    "cli.js",
+    "index.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "scaffold",
+    "tool",
+    "boilerplate"
+  ],
+  "dependencies": {
+    "got": "^6.3.0",
+    "is-url": "^1.2.1",
+    "meow": "^3.7.0",
+    "unzip": "^0.1.11"
+  }
 }
