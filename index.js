@@ -5,8 +5,8 @@ const mkdirp = require('mkdirp');
 const unzip = require('unzip');
 const stripPath = require('./lib/stripPath');
 
-function fetch(url, relativePath) {
-  const destPath = path.join(process.cwd(), relativePath || '');
+function fetch(url, relativePath = '') {
+  const destPath = path.join(process.cwd(), relativePath);
 
   got.stream(url)
     .on('error', _err)
