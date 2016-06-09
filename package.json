@@ -1,6 +1,6 @@
 {
   "name": "booom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple CLI to scaffold some files or folder structures to kickstart new projects.",
   "license": "MIT",
   "repository": "andreruffert/booom-cli",
