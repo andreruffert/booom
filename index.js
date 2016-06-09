@@ -4,11 +4,16 @@ const path = require('path');
 const mkdirp = require('mkdirp');
 const unzip = require('unzip');
 const stripPath = require('./lib/stripPath');
+const pkg = require('./package.json');
 
 function fetch(url, relativePath = '') {
   const destPath = path.join(process.cwd(), relativePath);
 
-  got.stream(url)
+  got.stream(url, {
+      headers: {
+        'user-agent': `${pkg.name}/${pkg.version} (${pkg.repository})`
+      }
+    })
     .on('error', _err)
     .pipe(unzip.Parse())
     .on('entry', function (entry) {
