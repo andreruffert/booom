@@ -3,9 +3,9 @@
   "version": "1.0.1",
   "description": "A simple CLI to scaffold some files or folder structures to kickstart new projects.",
   "license": "MIT",
-  "repository": "andreruffert/booom-cli",
+  "repository": "https://github.com/andreruffert/booom",
   "bugs": {
-    "url": "https://github.com/andreruffert/booom-cli/issues"
+    "url": "https://github.com/andreruffert/booom/issues"
   },
   "author": {
     "name": "André Ruffert",
