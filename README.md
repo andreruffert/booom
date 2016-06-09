@@ -34,7 +34,7 @@ $ booom --help
 
 ## Scaffolding templates
 
-A very simple scaffolding template could be e.g. [this](https://github.com/andreruffert/booom--standard/archive/master.zip).
+A very simple scaffolding template could be e.g. [this](https://github.com/andreruffert/booom--standard/).
 All files/folders located in the templates directory would be extracted to your current working directory (i.e. the directory from which you invoked the `booom` command).
 
 ## License
