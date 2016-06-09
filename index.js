@@ -18,9 +18,9 @@ function fetch(url, relativePath = '') {
     .pipe(unzip.Parse())
     .on('entry', function (entry) {
       const isFile = 'File' === entry.type; // File | Directory
-      const fullpath  = path.join(destPath, stripPath(entry.path, 2));
-      const directory = !isFile ? fullpath : path.dirname(fullpath);
-      const filename = path.basename(fullpath);
+      const fullPath  = path.join(destPath, stripPath(entry.path, 2));
+      const directory = !isFile ? fullPath : path.dirname(fullPath);
+      const filename = path.basename(fullPath);
 
       // Just extract `/templates/**` files.
       if (/templates/.test(entry.path)) {
@@ -29,7 +29,7 @@ function fetch(url, relativePath = '') {
             _err(err);
           }
           if (isFile) {
-            entry.pipe(fs.createWriteStream(fullpath));
+            entry.pipe(fs.createWriteStream(fullPath));
           }
         });
       }
