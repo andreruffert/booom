@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
 const unzip = require('unzip');
-const stripPath = require('./lib/stripPath');
+const stripPath = require('./lib/strip-path');
 const pkg = require('./package.json');
 
 function fetch(url, relativePath = '') {
