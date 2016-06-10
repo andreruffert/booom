@@ -1,31 +1,15 @@
 {
   "name": "booom",
   "version": "1.0.1",
-  "description": "A simple CLI to scaffold some files or folder structures to kickstart new projects.",
-  "license": "MIT",
-  "repository": "https://github.com/andreruffert/booom",
-  "bugs": {
-    "url": "https://github.com/andreruffert/booom/issues"
-  },
-  "author": {
-    "name": "André Ruffert",
-    "url": "andreruffert.com"
-  },
+  "description": "A simple CLI to scaffold some files or folder structures to kickstart new projects",
+  "main": "index.js",
   "bin": {
     "booom": "cli.js",
     "bo": "cli.js"
   },
-  "engines": {
-    "node": ">=6"
-  },
   "scripts": {
     "test": "ava"
   },
-  "files": [
-    "lib",
-    "cli.js",
-    "index.js"
-  ],
   "keywords": [
     "cli-app",
     "cli",
@@ -33,6 +17,24 @@
     "tool",
     "boilerplate"
   ],
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "lib",
+    "cli.js",
+    "index.js"
+  ],
+  "license": "MIT",
+  "author": "André Ruffert <andreruffert.com>",
+  "homepage": "https://github.com/andreruffert/booom",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreruffert/booom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andreruffert/booom/issues"
+  },
   "dependencies": {
     "got": "^6.3.0",
     "is-url": "^1.2.1",
