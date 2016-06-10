@@ -7,6 +7,10 @@ const stripPath = require('./lib/strip-path');
 const pkg = require('./package.json');
 
 function fetch(url, relativePath = '') {
+  if (typeof url !== 'string') {
+    _err(`Parameter \`url\` must be a string, not ${typeof url}`);
+  }
+
   const destPath = path.join(process.cwd(), relativePath);
 
   got.stream(url, {
