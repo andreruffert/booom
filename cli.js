@@ -38,4 +38,4 @@ if (!args.url) {
   process.exit(1);
 }
 
-booom.fetch(args.url);
+booom(args.url);

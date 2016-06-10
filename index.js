@@ -6,12 +6,20 @@ const unzip = require('unzip');
 const stripPath = require('./lib/strip-path');
 const pkg = require('./package.json');
 
-function fetch(url, relativePath = '') {
+const defaultOpts = {
+  relativePath: ''
+};
+
+function booom(url, opts = defaultOpts) {
+  return fetch(url, opts);
+}
+
+function fetch(url, opts) {
   if (typeof url !== 'string') {
     _err(`Parameter \`url\` must be a string, not ${typeof url}`);
   }
 
-  const destPath = path.join(process.cwd(), relativePath);
+  const destPath = path.join(process.cwd(), opts.relativePath);
 
   got.stream(url, {
     headers: {
@@ -44,10 +52,11 @@ function fetch(url, relativePath = '') {
     }
   });
 
+  return {url, opts};
 }
 
 function _err(err) {
   throw new Error(err);
 }
 
-module.exports = {fetch};
+module.exports = booom;
