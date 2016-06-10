@@ -3,8 +3,8 @@
 
 const meow = require('meow');
 const isUrl = require('is-url');
-const booom = require('./');
 const pkg = require('./package.json');
+const booom = require('./');
 
 const cli = meow(`
   Usage:
