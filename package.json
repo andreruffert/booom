@@ -8,7 +8,10 @@
     "bo": "cli.js"
   },
   "scripts": {
-    "test": "ava"
+    "test": "xo && ava"
+  },
+  "xo": {
+    "space": true
   },
   "keywords": [
     "cli-app",
@@ -43,6 +46,7 @@
   },
   "devDependencies": {
     "ava": "^0.15.1",
-    "execa": "^0.4.0"
+    "execa": "^0.4.0",
+    "xo": "^0.15.1"
   }
 }
