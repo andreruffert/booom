@@ -2,6 +2,8 @@
 
 > A simple CLI to scaffold some files or folder structures to kickstart new projects.
 
+[![Build Status](https://travis-ci.org/andreruffert/booom.svg?branch=master)](https://travis-ci.org/andreruffert/booom) [![npm version](https://img.shields.io/npm/v/booom.svg)](https://www.npmjs.com/package/booom)
+
 BOOOM! is a tool which helps to rapidly get started with a new project.
 A common use cases would be to create some basic config files like e.g. `.editorconfig`, `.gitattributes`, `.gitignore` etc.
 To create them every time manually can be really annoying. With `booom` it's just a simple terminal command and you can start coding immediately. "BOOOM!" that's it.
