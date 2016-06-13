@@ -9,5 +9,3 @@ test('show --version', async t => {
 test('show --help', async t => {
   t.regex(await execa.stdout('../cli.js', ['--help']), new RegExp(pkg.description));
 });
-
-
